@@ -1,0 +1,45 @@
+.ButtonBar {
+    position: relative;
+    width: 80%;
+    border-radius: 25%;
+    justify-content: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.ButtonBar button {
+    position: relative;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    float: left;
+    align-items: center;
+    padding: 1em;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+    /* line-height: 65px; */
+}
+
+.ButtonBar button:hover {
+    background-color: var(--dark-gray);
+}
+
+.ButtonBar a {
+    flex: 1;
+}
+
+.First {
+    border-radius: 20px 0 0 20px;
+}
+
+.Last {
+    border-radius: 0 20px 20px 0;
+}
+
+.Selected {
+    background-color: var(--dark-gray);
+}

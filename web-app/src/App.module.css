@@ -1,0 +1,113 @@
+:root {
+    --gray: rgb(240, 240, 240);
+    --background: white;
+    --underline: #0087ca;
+    --dark-gray: rgb(200, 200, 200)
+}
+
+.App {
+    text-align: center;
+}
+
+.Chart {
+    background-color: white;
+    margin-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 8px;
+}
+
+.Chart h1 {
+    font-size: large;
+}
+
+.Chart h1:before {
+    position: relative;
+    content: "";
+    left: 1%;
+    top: 0%;
+    width: 10px;
+    height: 10px;
+    color: #0087ca;
+    background-color: #0087ca;
+    margin-right: 10px;
+    padding-right: 1%;
+}
+
+.ChartContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    animation: fadeInMoveUp 5s 1;
+    background-color: rgb(240, 240, 240);
+    padding: 1em;
+    margin: 2em;
+    border-radius: 8px;
+}
+
+@keyframes fadeInMoveUp {
+    from {
+        opacity: 0;
+        transform: translateY(5em);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.gap {
+    padding: 5em;
+}
+
+.gap::before,
+.gap::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+}
+
+.gap::before {
+    width: 55%;
+    height: 109%;
+    background-color: rgb(255, 0, 0);
+    right: -1.5%;
+    top: 60%;
+}
+
+.gap::after {
+    width: 55%;
+    height: 100%;
+    background-color: #2c3e50;
+    left: -1.5%;
+    top: 40%;
+}
+
+.underlineEffect {
+    position: relative;
+    overflow: hidden;
+}
+
+.underlineEffect:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--underline);
+    transform-origin: bottom;
+    transition: transform 0.25s ease-out;
+    border-radius: inherit;
+    overflow: hidden;
+}
+
+.underlineEffect:hover:after {
+    transform: scaleX(1);
+}
